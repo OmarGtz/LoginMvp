@@ -8,10 +8,11 @@ public interface LoginView {
 
     void goToMain();
     void showProgress();
-    void setUserName();
+    void setUserNameError();
     void setPasswordError();
     void goToRegister();
     void goToRecoveryPassword();
+    void onClickBtnLogin();
 
 
 }

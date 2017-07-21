@@ -6,6 +6,16 @@ package com.example.administrador.androidmvp.Login;
 
 public interface LoginInteractor {
 
+    public interface onLoginLister{
+        void onErrorUserLogin();
+        void onSucessLogin();
+        void onErrorPassLogin();
 
-    void Login(String User,String pass);
+    }
+
+
+    void Login(String user,String pass,onLoginLister lister);
+
+
+
 }
