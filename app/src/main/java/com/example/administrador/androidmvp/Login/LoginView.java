@@ -13,4 +13,5 @@ public interface LoginView {
     void goToRegister();
     void goToRecoveryPassword();
 
+
 }
