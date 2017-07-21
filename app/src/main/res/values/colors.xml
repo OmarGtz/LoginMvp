@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--agregados-->
+    <color name="hint">#FAFAFA</color>
+    <color name="font">#FAFAFA</color>
+    <color name="background_button">#FAFAFA</color>
+    <color name="colorStarsActivated">#FFBF00</color>
+    <color name="colorStarNormal">#9E9E9E</color>
+    <color name="colorResumenConsultaBackgroud">#EEEEEE</color>
+    <color name="text_highlight">#B3E5FC</color>
+    <color name="text_edith_text_highlight">#303F9F</color>
+    <color name="button_background_secundary">#303F9F</color>
+    <color name="colorResumenDatosDoctorBackgroud">#EEEEEE</color>
+    <color name="colorBackGroundToolbar">#1665f0</color>
+    <color name="colorDialogHeader">#009CDC</color>
+
+</resources>
