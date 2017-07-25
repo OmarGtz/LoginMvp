@@ -21,9 +21,6 @@ public class LoginActivity extends AppCompatActivity implements LoginView, View.
     TextView tvRecoveryPass;
     LoginPresenter presenter;
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,13 +31,10 @@ public class LoginActivity extends AppCompatActivity implements LoginView, View.
         btnIniciar = (Button)findViewById(R.id.login_btn_iniciar);
         tvRegister = (TextView)findViewById(R.id.login_tv_registrarse);
         tvRecoveryPass = (TextView)findViewById(R.id.login_tv_recovery);
-
         btnIniciar.setOnClickListener(this);
         tvRegister.setOnClickListener(this);
         tvRecoveryPass.setOnClickListener(this);
-
         presenter = new LoginPresenterImp(this);
-
     }
 
     @Override
