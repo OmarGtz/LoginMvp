@@ -12,8 +12,6 @@ public class LoginInteractorImpl implements LoginInteractor {
     public void Login(String user, String pass, onLoginLister lister) {
 
         boolean error = false;
-
-
         if(user.isEmpty()){
             lister.onErrorUserLogin();
 
@@ -23,6 +21,16 @@ public class LoginInteractorImpl implements LoginInteractor {
         }else {
             lister.onSucessLogin();
         }
+
+    }
+
+    @Override
+    public void goToRecovery() {
+
+    }
+
+    @Override
+    public void gotoRegister() {
 
     }
 }

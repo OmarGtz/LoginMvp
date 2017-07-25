@@ -13,9 +13,8 @@ public interface LoginInteractor {
 
     }
 
-
     void Login(String user,String pass,onLoginLister lister);
-
-
+    void goToRecovery();
+    void gotoRegister();
 
 }
