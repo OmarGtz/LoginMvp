@@ -7,4 +7,8 @@ package com.example.administrador.androidmvp.Login;
 public interface LoginPresenter {
     void ValidCredentials(String mail, String pass);
 
+    void goToRegister();
+
+    void goToRecovery();
+
 }

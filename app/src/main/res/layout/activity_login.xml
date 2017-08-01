@@ -15,17 +15,15 @@
 
     <ImageView
         android:id="@+id/logoo"
-        android:src="@drawable/logo_interior"
-        android:layout_gravity="center"
-        android:layout_width="110dp"
-        android:layout_height="110dp"/>
+        style="@style/logo"
+        />
+
     <TextView
         android:gravity="center"
         android:id="@+id/tv_bienvenido"
         android:textStyle="bold"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight=".4"
+        android:layout_height="wrap_content"
         android:textSize="@dimen/text_titulo"
         android:textColor="@android:color/white"
         android:layout_marginBottom="20dp"

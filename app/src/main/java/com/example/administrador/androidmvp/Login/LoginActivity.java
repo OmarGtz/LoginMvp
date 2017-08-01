@@ -1,6 +1,7 @@
 package com.example.administrador.androidmvp.Login;
 
 import android.content.Intent;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +12,8 @@ import android.widget.Toast;
 
 import com.example.administrador.androidmvp.Main.MainActivity;
 import com.example.administrador.androidmvp.R;
+import com.example.administrador.androidmvp.Register.RegisterActivity;
+import com.example.administrador.androidmvp.recoveryPass.RecoveryActivity;
 
 public class LoginActivity extends AppCompatActivity implements LoginView, View.OnClickListener {
 
@@ -20,6 +23,8 @@ public class LoginActivity extends AppCompatActivity implements LoginView, View.
     TextView tvRegister;
     TextView tvRecoveryPass;
     LoginPresenter presenter;
+    TextInputLayout inputLayoutMail;
+    TextInputLayout inputLayoutPass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +36,9 @@ public class LoginActivity extends AppCompatActivity implements LoginView, View.
         btnIniciar = (Button)findViewById(R.id.login_btn_iniciar);
         tvRegister = (TextView)findViewById(R.id.login_tv_registrarse);
         tvRecoveryPass = (TextView)findViewById(R.id.login_tv_recovery);
+        inputLayoutMail = (TextInputLayout)findViewById(R.id.input_layout_correo);
+        inputLayoutPass = (TextInputLayout)findViewById(R.id.input_layout_pas);
+
         btnIniciar.setOnClickListener(this);
         tvRegister.setOnClickListener(this);
         tvRecoveryPass.setOnClickListener(this);
@@ -51,8 +59,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView, View.
     @Override
     public void setUserNameError() {
 
-        Toast.makeText(this,"error user name",Toast.LENGTH_SHORT).show();
-
+        inputLayoutMail.setError("correo invalido");
 
     }
 
@@ -60,13 +67,13 @@ public class LoginActivity extends AppCompatActivity implements LoginView, View.
     public void setPasswordError() {
 
 
-        Toast.makeText(this,"Error pass",Toast.LENGTH_SHORT).show();
-
+        inputLayoutPass.setError("contraseña invalida");
     }
 
     @Override
     public void goToRegister() {
 
+        startActivity(new Intent(this, RegisterActivity.class));
         Toast.makeText(this,"RegisterActivity",Toast.LENGTH_SHORT).show();
 
     }
@@ -74,6 +81,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView, View.
     @Override
     public void goToRecoveryPassword() {
 
+        startActivity(new Intent(this, RecoveryActivity.class));
         Toast.makeText(this,"RecoveryPassword",Toast.LENGTH_SHORT).show();
 
     }
@@ -86,7 +94,20 @@ public class LoginActivity extends AppCompatActivity implements LoginView, View.
 
     @Override
     public void onClick(View v) {
-        presenter.ValidCredentials(inputUser.getText().toString(),inpurPass.getText().toString());
+
+        switch (v.getId()){
+            case R.id.login_tv_registrarse:
+                presenter.goToRegister();
+                break;
+
+            case R.id.login_tv_recovery:
+                presenter.goToRecovery();
+                break;
+
+            case R.id.login_btn_iniciar:
+                presenter.ValidCredentials(inputUser.getText().toString(),inpurPass.getText().toString());
+                break;
+        }
 
     }
 }

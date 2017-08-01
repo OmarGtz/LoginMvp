@@ -25,8 +25,22 @@ public class LoginPresenterImp implements LoginPresenter, LoginInteractor.onLogi
     }
 
     @Override
+    public void goToRegister() {
+        loginView.goToRegister();
+    }
+
+    @Override
+    public void goToRecovery() {
+
+        loginView.goToRecoveryPassword();
+    }
+
+    @Override
     public void onErrorUserLogin() {
+
+
         loginView.setUserNameError();
+
 
     }
 
