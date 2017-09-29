@@ -5,4 +5,8 @@ package com.example.administrador.androidmvp.Main;
  */
 
 public interface MainPresenter {
+
+
+    void getPreferencesUser();
+
 }

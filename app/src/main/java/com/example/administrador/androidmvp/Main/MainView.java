@@ -5,4 +5,8 @@ package com.example.administrador.androidmvp.Main;
  */
 
 public interface MainView {
+    void showUser(String user);
+    void showPass(String pass);
+    void showPreferencesEmptyError();
+
 }

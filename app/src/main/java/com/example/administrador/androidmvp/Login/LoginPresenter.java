@@ -5,10 +5,14 @@ package com.example.administrador.androidmvp.Login;
  */
 
 public interface LoginPresenter {
-    void ValidCredentials(String mail, String pass);
 
+    void onCreate();
+    void onStart();
+    void onPause();
+    void onStop();
+    void validateLogin(String user,String pass);
     void goToRegister();
-
     void goToRecovery();
+
 
 }

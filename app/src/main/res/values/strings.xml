@@ -1,10 +1,22 @@
 <resources>
     <string name="app_name">AndroidMvp</string>
 
-
-    <!-- login-->
-    <string name="title_login">¡Bienvenido!</string>
-
-
+    <!--Login-->
+    <string name="login_text_mail_empty">Ingresa un correo</string>
+    <string name="login_text_pass_empty">Ingresa la contraseña</string>
+    <string name="login_text_hint_pass">Contraseña</string>
+    <string name="login_text_hint_mail">Correo electrónico</string>
+    <string name="login_text_btn_login_text">Iniciar</string>
+    <string name="login_text_tv_olvide_contraseña">¿Olvidaste tu contraseña?</string>
+    <string name="login_text_tv_recuperar">Olvidé mi contraseña</string>
+    <string name="login_text_tv_tienes_cuenta">¿No tienes cuenta?</string>
+    <string name="login_text_tv_registro">Crear una cuenta</string>
+    <string name="login_text_tv_title">¡BIENVENIDO!</string>
+    <string name="login_text_logo_description">logo Dr. Go</string>
+    <string name="login_text_error_conexion">Error de conexión.</string>
+    <string name="login_text_error_login">Contraseña o correo invalidos.</string>
+    <string name="login_text_progres_bar_text">Iniciando sesión</string>
+    <string name="login_text_welcome">Bienvenido</string>
+    <string name="login_text_mail_invalid">correo electrónico invalido.</string>
 
 </resources>

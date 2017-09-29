@@ -5,4 +5,15 @@ package com.example.administrador.androidmvp.Main;
  */
 
 public interface MainInteractor {
+
+
+    interface OnPreferences{
+        void onPreferencesSucess(String user,String pass);
+        void onPreferencesError();
+
+    }
+
+    void onGetPreferencesUser(OnPreferences onPreferences);
+
+
 }

@@ -1,5 +1,6 @@
 package com.example.administrador.androidmvp.Login;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -9,7 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import com.example.administrador.androidmvp.Data.local.PreferencesManager;
+import com.example.administrador.androidmvp.Data.local.preferencesManagerImpl;
 import com.example.administrador.androidmvp.Main.MainActivity;
 import com.example.administrador.androidmvp.R;
 import com.example.administrador.androidmvp.Register.RegisterActivity;
@@ -17,85 +19,143 @@ import com.example.administrador.androidmvp.recoveryPass.RecoveryActivity;
 
 public class LoginActivity extends AppCompatActivity implements LoginView, View.OnClickListener {
 
-    EditText inputUser;
-    EditText inpurPass;
-    Button btnIniciar;
-    TextView tvRegister;
-    TextView tvRecoveryPass;
+    //views
+    private Button btnIniciar;
+    private EditText inputUsuario;
+    private EditText inputPass;
+    private TextView tvRegistrarse;
+    private TextInputLayout inputLayoutCorreo;
+    private TextInputLayout inputLayoutPass;
+    private ProgressDialog progressDialog;
+
+    //variables
+    private String user;
+    private String pass;
+    private PreferencesManager preferencesManager;
+    private TextView tvRecovery;
     LoginPresenter presenter;
-    TextInputLayout inputLayoutMail;
-    TextInputLayout inputLayoutPass;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        preferencesManager = new preferencesManagerImpl(this);
+        presenter = new LoginPresenterImp(this,preferencesManager);
+        presenter.onCreate();
+    }
 
-        inputUser = (EditText)findViewById(R.id.login_input_user);
-        inpurPass = (EditText)findViewById(R.id.login_input_pass);
-        btnIniciar = (Button)findViewById(R.id.login_btn_iniciar);
-        tvRegister = (TextView)findViewById(R.id.login_tv_registrarse);
-        tvRecoveryPass = (TextView)findViewById(R.id.login_tv_recovery);
-        inputLayoutMail = (TextInputLayout)findViewById(R.id.input_layout_correo);
-        inputLayoutPass = (TextInputLayout)findViewById(R.id.input_layout_pas);
-
-        btnIniciar.setOnClickListener(this);
-        tvRegister.setOnClickListener(this);
-        tvRecoveryPass.setOnClickListener(this);
-        presenter = new LoginPresenterImp(this);
+    @Override
+    protected void onStart() {
+        super.onStart();
+        presenter.onStart();
     }
 
     @Override
     public void goToMain() {
-        startActivity(new Intent(this, MainActivity.class));
-        finish();
+
+        Intent intentMain = new Intent(this,MainActivity.class);
+        intentMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intentMain);
+
     }
 
     @Override
     public void showProgress() {
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage(getResources().getString(R.string.login_text_progres_bar_text));
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progressDialog.show();
+    }
+
+    @Override
+    public void showErrorLogin() {
+
+        Toast.makeText(this,"Correo o contraseña invalidos",Toast.LENGTH_SHORT).show();
 
     }
 
     @Override
-    public void setUserNameError() {
-
-        inputLayoutMail.setError("correo invalido");
-
+    public void hideProgress() {
+        progressDialog.dismiss();
     }
 
     @Override
-    public void setPasswordError() {
+    public void initViews() {
+        inputLayoutCorreo = (TextInputLayout)findViewById(R.id.input_layout_correo);
+        inputLayoutPass = (TextInputLayout)findViewById(R.id.input_layout_pas);
+        btnIniciar = (Button)findViewById(R.id.login_btn_iniciar);
+        tvRegistrarse = (TextView)findViewById(R.id.login_tv_registrarse);
+        tvRecovery = (TextView)findViewById(R.id.login_tv_recovery);
+        inputUsuario = (EditText)findViewById(R.id.login_input_user);
+        inputPass = (EditText)findViewById(R.id.login_input_pass);
 
-
-        inputLayoutPass.setError("contraseña invalida");
     }
 
     @Override
     public void goToRegister() {
 
-        startActivity(new Intent(this, RegisterActivity.class));
-        Toast.makeText(this,"RegisterActivity",Toast.LENGTH_SHORT).show();
+        Intent intentRegister = new Intent(this,RegisterActivity.class);
+        startActivity(intentRegister);
 
     }
 
     @Override
-    public void goToRecoveryPassword() {
+    public void goToRecovery() {
+        Intent intentRecovery = new Intent(this,RecoveryActivity.class);
+        startActivity(intentRecovery);
+    }
 
-        startActivity(new Intent(this, RecoveryActivity.class));
-        Toast.makeText(this,"RecoveryPassword",Toast.LENGTH_SHORT).show();
+    @Override
+    public void setErrorEmptyUser() {
+
+        inputLayoutCorreo.setError(getResources().getString(R.string.login_text_mail_empty));
 
     }
 
     @Override
-    public void onClickBtnLogin() {
+    public void noErrorPass() {
+
+        //si no es vacio y es un correo valido error es null
+        inputLayoutPass.setError(null);
+    }
+
+    @Override
+    public void onClickListener() {
+        btnIniciar.setOnClickListener(this);
+        tvRegistrarse.setOnClickListener(this);
+        tvRecovery.setOnClickListener(this);
 
     }
 
+    @Override
+    public void noErrorMail() {
+        //si no es vacio y es un correo valido error es null
+        inputLayoutCorreo.setError(null);
+    }
+
+    @Override
+    public void setErrorEmptyPassword() {
+
+        inputLayoutPass.setError(getResources().getString(R.string.login_text_pass_empty));
+
+    }
+
+    @Override
+    public void setErrorInvalidMail() {
+        inputLayoutCorreo.setError(getResources().getString(R.string.login_text_mail_invalid));
+
+    }
 
     @Override
     public void onClick(View v) {
-
         switch (v.getId()){
+            //si se presiona iniciar sesion
+            case R.id.login_btn_iniciar:
+
+                presenter.validateLogin(inputUsuario.getText().toString(),inputPass.getText().toString());
+                break;
+
+            //si se presiona registrarse
             case R.id.login_tv_registrarse:
                 presenter.goToRegister();
                 break;
@@ -103,11 +163,6 @@ public class LoginActivity extends AppCompatActivity implements LoginView, View.
             case R.id.login_tv_recovery:
                 presenter.goToRecovery();
                 break;
-
-            case R.id.login_btn_iniciar:
-                presenter.ValidCredentials(inputUser.getText().toString(),inpurPass.getText().toString());
-                break;
         }
-
     }
 }

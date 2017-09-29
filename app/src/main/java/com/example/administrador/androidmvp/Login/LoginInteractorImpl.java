@@ -1,6 +1,15 @@
 package com.example.administrador.androidmvp.Login;
 
-import android.content.Intent;
+import android.util.Patterns;
+
+import com.example.administrador.androidmvp.Data.api.ApiDrgo;
+import com.example.administrador.androidmvp.Data.api.ServiceGeneratorDrGo;
+import com.example.administrador.androidmvp.model.responseApi.ResponseLogin;
+import com.example.administrador.androidmvp.utils.Constants;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 /**
  * Created by Administrador on 20/07/17.
@@ -8,29 +17,22 @@ import android.content.Intent;
 
 public class LoginInteractorImpl implements LoginInteractor {
 
+
     @Override
-    public void Login(String user, String pass, onLoginLister lister) {
+    public void Login(String user, String pass, final OnLoginListener onlogin) {
 
-        boolean error = false;
         if(user.isEmpty()){
-            lister.onErrorUserLogin();
 
+            onlogin.onLoginUserEmpty();
         }else if (pass.isEmpty()){
-            lister.onErrorPassLogin();
-
-        }else {
-            lister.onSucessLogin();
+            onlogin.onLoginPassEmpty();
+        }else if(!Patterns.EMAIL_ADDRESS.matcher(user).matches()){
+            onlogin.onLoginUserInvalid();
+    }else {
+            onlogin.onLoginSuceess();
         }
 
-    }
-
-    @Override
-    public void goToRecovery() {
 
     }
 
-    @Override
-    public void gotoRegister() {
-
-    }
 }

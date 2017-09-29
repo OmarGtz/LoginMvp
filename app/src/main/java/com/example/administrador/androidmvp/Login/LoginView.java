@@ -5,15 +5,18 @@ package com.example.administrador.androidmvp.Login;
  */
 
 public interface LoginView {
-
     void goToMain();
     void showProgress();
-    void setUserNameError();
-    void setPasswordError();
+    void showErrorLogin();
+    void hideProgress();
+    void initViews();
     void goToRegister();
-    void goToRecoveryPassword();
-    void onClickBtnLogin();
-
-
+    void goToRecovery();
+    void setErrorEmptyUser();
+    void noErrorPass();
+    void onClickListener();
+    void noErrorMail();
+    void setErrorEmptyPassword();
+    void setErrorInvalidMail();
 
 }
