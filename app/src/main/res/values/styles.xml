@@ -9,14 +9,21 @@
     </style>
 
 
+    <!-- theme no actionBar-->
     <style name="AppTheme.NoActionBar" parent="AppTheme">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
+    <!-- theme splashScreen-->
+
+    <style name="AppThemeSplashScreen" parent="AppTheme.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+    </style>
 
 
-
+    <!-- style login -->
 
     <style name="boton">
         <item name="android:layout_width">wrap_content</item>
@@ -79,5 +86,10 @@
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">@android:color/holo_red_light</item>
     </style>
+
+    <!-- style recovery password-->
+
+
+    <!-- style register-->
 
 </resources>

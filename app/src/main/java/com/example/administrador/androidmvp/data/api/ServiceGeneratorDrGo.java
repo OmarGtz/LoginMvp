@@ -1,6 +1,5 @@
-package com.example.administrador.androidmvp.Data.api;
+package com.example.administrador.androidmvp.data.api;
 
-import com.example.administrador.androidmvp.Data.api.ApiDrgo;
 import com.example.administrador.androidmvp.utils.Constants;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

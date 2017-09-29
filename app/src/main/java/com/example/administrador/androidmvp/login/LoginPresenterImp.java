@@ -1,7 +1,6 @@
-package com.example.administrador.androidmvp.Login;
+package com.example.administrador.androidmvp.login;
 
-import com.example.administrador.androidmvp.Data.local.PreferencesManager;
-import com.example.administrador.androidmvp.model.responseApi.ResponseLogin;
+import com.example.administrador.androidmvp.data.local.PreferencesManager;
 
 
 public class LoginPresenterImp implements LoginPresenter{
@@ -19,9 +18,9 @@ public class LoginPresenterImp implements LoginPresenter{
 
     }
 
-
     @Override
     public void onCreate() {
+
         loginView.initViews();
 
     }

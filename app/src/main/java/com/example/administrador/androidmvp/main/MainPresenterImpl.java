@@ -1,6 +1,6 @@
-package com.example.administrador.androidmvp.Main;
+package com.example.administrador.androidmvp.main;
 
-import com.example.administrador.androidmvp.Data.local.PreferencesManager;
+import com.example.administrador.androidmvp.data.local.PreferencesManager;
 
 /**
  * Created by Administrador on 29/09/17.

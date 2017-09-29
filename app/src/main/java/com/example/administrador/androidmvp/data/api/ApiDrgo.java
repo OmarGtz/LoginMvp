@@ -1,17 +1,13 @@
-package com.example.administrador.androidmvp.Data.api;
+package com.example.administrador.androidmvp.data.api;
 
 import com.example.administrador.androidmvp.model.responseApi.ResponseLogin;
 import com.example.administrador.androidmvp.model.responseApi.ResponseRegister;
-
-import java.util.List;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
-import retrofit2.http.GET;
 import retrofit2.http.POST;
-import retrofit2.http.Query;
 
 public interface ApiDrgo {
 

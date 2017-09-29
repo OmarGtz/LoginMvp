@@ -1,4 +1,4 @@
-package com.example.administrador.androidmvp.Data.local;
+package com.example.administrador.androidmvp.data.local;
 
 /**
  * Created by Administrador on 28/09/17.

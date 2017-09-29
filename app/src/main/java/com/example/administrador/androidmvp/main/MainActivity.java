@@ -1,11 +1,11 @@
-package com.example.administrador.androidmvp.Main;
+package com.example.administrador.androidmvp.main;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.example.administrador.androidmvp.Data.local.PreferencesManager;
-import com.example.administrador.androidmvp.Data.local.preferencesManagerImpl;
+import com.example.administrador.androidmvp.data.local.PreferencesManager;
+import com.example.administrador.androidmvp.data.local.preferencesManagerImpl;
 import com.example.administrador.androidmvp.R;
 
 public class MainActivity extends AppCompatActivity implements MainView{

@@ -1,15 +1,6 @@
-package com.example.administrador.androidmvp.Login;
+package com.example.administrador.androidmvp.login;
 
 import android.util.Patterns;
-
-import com.example.administrador.androidmvp.Data.api.ApiDrgo;
-import com.example.administrador.androidmvp.Data.api.ServiceGeneratorDrGo;
-import com.example.administrador.androidmvp.model.responseApi.ResponseLogin;
-import com.example.administrador.androidmvp.utils.Constants;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 /**
  * Created by Administrador on 20/07/17.

@@ -1,4 +1,4 @@
-package com.example.administrador.androidmvp.Register;
+package com.example.administrador.androidmvp.register;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

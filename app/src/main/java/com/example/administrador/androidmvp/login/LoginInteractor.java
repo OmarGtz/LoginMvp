@@ -1,6 +1,4 @@
-package com.example.administrador.androidmvp.Login;
-
-import com.example.administrador.androidmvp.model.responseApi.ResponseLogin;
+package com.example.administrador.androidmvp.login;
 
 /**
  * Created by Administrador on 20/07/17.

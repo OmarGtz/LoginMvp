@@ -1,4 +1,4 @@
-package com.example.administrador.androidmvp.Data.local;
+package com.example.administrador.androidmvp.data.local;
 
 import android.content.Context;
 import android.content.SharedPreferences;

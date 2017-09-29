@@ -1,4 +1,4 @@
-package com.example.administrador.androidmvp.Login;
+package com.example.administrador.androidmvp.login;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -10,11 +10,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.example.administrador.androidmvp.Data.local.PreferencesManager;
-import com.example.administrador.androidmvp.Data.local.preferencesManagerImpl;
-import com.example.administrador.androidmvp.Main.MainActivity;
+import com.example.administrador.androidmvp.data.local.PreferencesManager;
+import com.example.administrador.androidmvp.data.local.preferencesManagerImpl;
+import com.example.administrador.androidmvp.main.MainActivity;
 import com.example.administrador.androidmvp.R;
-import com.example.administrador.androidmvp.Register.RegisterActivity;
+import com.example.administrador.androidmvp.register.RegisterActivity;
 import com.example.administrador.androidmvp.recoveryPass.RecoveryActivity;
 
 public class LoginActivity extends AppCompatActivity implements LoginView, View.OnClickListener {
