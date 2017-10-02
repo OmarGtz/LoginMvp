@@ -9,7 +9,7 @@
     <string name="login_text_btn_login_text">Iniciar</string>
     <string name="login_text_tv_olvide_contraseña">¿Olvidaste tu contraseña?</string>
     <string name="login_text_tv_recuperar">Olvidé mi contraseña</string>
-    <string name="login_text_tv_tienes_cuenta">¿No tienes cuenta?</string>
+    <string name="login_text_tv_crear_cuenta">Crear una cuenta</string>
     <string name="login_text_tv_registro">Crear una cuenta</string>
     <string name="login_text_tv_title">¡BIENVENIDO!</string>
     <string name="login_text_logo_description">logo Dr. Go</string>
@@ -18,5 +18,33 @@
     <string name="login_text_progres_bar_text">Iniciando sesión</string>
     <string name="login_text_welcome">Bienvenido</string>
     <string name="login_text_mail_invalid">correo electrónico invalido.</string>
+
+
+
+    <!--register-->
+    <string name="register_title_toolbar">Registro</string>
+    <string name="register_title">Registrate</string>
+    <string name="register_hint_name">Nombre</string>
+    <string name="register_hint_lastname_p">Apellido paterno</string>
+    <string name="register_hint_mail">Correo electrónico</string>
+    <string name="register_hint_pass">Contraseña</string>
+    <string name="register_hint_confirm_password">Confirmar contraseña</string>
+    <string name="register_terms_conditions"> <u>términos y condiciones</u></string>
+    <string name="register_rb_femenino">Femenino</string>
+    <string name="register_rb_masculino">Masculino</string>
+    <string name="register_terms_aceptar">Aceptar</string>
+    <string name="register_error_name_empty">Ingresa tu nombre(s).</string>
+    <string name="register_error_lastname_empty">Ingresa tu apellido.</string>
+    <string name="register_error_mail_empty">Ingresa tu correo.</string>
+    <string name="register_error_mail_no_valid">Correo invalido.</string>
+    <string name="register_error_cedule_empty">Ingresa tu cédula</string>
+    <string name="register_error_sex_empty">Ingresa tu sexo.</string>
+    <string name="register_error_pass_empty">Ingresa una contraseña</string>
+    <string name="register_error_confirme_pass">Las contraseñas no coinciden</string>
+    <string name="register_error_terms_no_acept">Debes aceptar términos y condiciones</string>
+    <string name="register_characters_mail">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@.-_1234567890</string>
+    <string name="register_aviso_privacity">Aviso de privacidad</string>
+    <string name="register_aviso_legal">Aviso_legal</string>
+
 
 </resources>

@@ -1,15 +1,170 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:background="@drawable/fondo_activity"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".register.RegisterActivity">
+    android:layout_height="match_parent">
 
-    <include layout="@layout/toolbar" />
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbar_register"
+        app:layout_constraintBottom_toBottomOf="parent"
+         />
+
+    <ImageView
+        android:id="@+id/logo"
+        style="@style/logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_register"
+         />
+
+    <TextView
+        style="@style/title"
+        android:text="@string/register_title"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/textView" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.502">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/registro_input_name"
+                style="@style/register_edittext"
+                android:inputType="text"
+                android:background="@drawable/register_textview_backround"
+                android:hint="@string/register_hint_name" />
+
+            <EditText
+                android:id="@+id/registro_input_lastname"
+                style="@style/register_edittext"
+                android:inputType="text"
+                android:background="@drawable/register_textview_backround"
+                android:hint="@string/register_hint_lastname_p" />
+
+            <EditText
+                android:id="@+id/registro_input_mail"
+                style="@style/register_edittext"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/register_textview_backround"
+                android:hint="@string/register_hint_mail" />
+
+            <RadioGroup
+                android:id="@+id/registro_rg_sexo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbGeneroMasculino"
+                    style="@style/register_radio_btn"
+                    android:layout_weight="1"
+                    android:paddingRight="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:background="@drawable/radio_btn_background"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/register_rb_masculino"
+                    android:textColor="@color/font" />
+
+                <RadioButton
+                    android:id="@+id/rbGeneroFemenino"
+                    style="@style/register_radio_btn"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:paddingRight="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:background="@drawable/radio_btn_background"
+                    android:button="@null"
+                    android:text="@string/register_rb_femenino"
+                    android:textColor="@color/font" />
+            </RadioGroup>
 
 
+            <EditText
+                android:id="@+id/registro_input_password"
+                style="@style/register_edittext"
+                android:background="@drawable/register_textview_backround"
+                android:hint="@string/register_hint_pass"
+                android:inputType="textPassword" />
 
-</LinearLayout>
+            <EditText
+                android:id="@+id/registro_input_confirm_password"
+                style="@style/register_edittext"
+                android:inputType="textPassword"
+                android:background="@drawable/register_textview_backround"
+                android:hint="@string/register_hint_confirm_password" />
+
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <CheckBox
+                    android:id="@+id/chbTerminosCondiciones"
+                    style="@style/register_checkbox" />
+                <TextView
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/register_terms_aceptar"/>
+                <TextView
+                    android:id="@+id/register_tv_politicas"
+                    android:textColor="@android:color/black"
+                    android:clickable="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/register_terms_conditions"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/register_rbtn_vertical_padding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/registro_tv_privacidad"
+                    android:textColor="@android:color/black"
+                    android:clickable="true"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_height="wrap_content"
+                    android:text="@string/register_aviso_privacity"/>
+                <TextView
+                    android:id="@+id/registro_tv_legal"
+                    android:textColor="@android:color/black"
+                    android:clickable="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/register_aviso_legal"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,18 +1,18 @@
 <resources>
 
+
+    <!-- theme no actionBar-->
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-    </style>
-
-
-    <!-- theme no actionBar-->
-    <style name="AppTheme.NoActionBar" parent="AppTheme">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
     </style>
 
     <!-- theme splashScreen-->
@@ -22,14 +22,38 @@
         <item name="android:windowBackground">@drawable/splash_screen</item>
     </style>
 
+    <!--styles-->
+
+
+    <style name="logo">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:src">@drawable/logo_interior</item>
+        <item name= "android:layout_gravity">center</item>
+    </style>
+
+    <!--title -->
+    <style name="title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/title_size</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
 
     <!-- style login -->
 
-    <style name="boton">
+    <style name="login_btn">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">10dp</item>
         <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:textColor">@color/font</item>
         <item name="android:background">@color/background_button</item>
@@ -39,16 +63,17 @@
         <item name="android:clickable">true</item>
     </style>
 
-    <!--logo drgo-->
-    <style name="logo">
-        <item name="android:layout_width">110dp</item>
-        <item name="android:layout_height">110dp</item>
+    <style name="login_logo">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">100dp</item>
         <item name="android:src">@drawable/logo_interior</item>
         <item name= "android:layout_gravity">center</item>
     </style>
 
     <!--title -->
-    <style name="title">
+    <style name="login_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center</item>
         <item name="android:textSize">@dimen/title_size</item>
         <item name="android:textColor">@color/colorText</item>
@@ -56,25 +81,26 @@
     </style>
 
     <!--estilo de TextInputLayout registro-->
-    <style name="inputLayout">
+    <style name="login_inputLayout">
         <item name="android:textColorHint">@android:color/white</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@android:color/white</item>
         <item name="android:textSize">8sp</item>
     </style>
+
     <!--estilo hintTextAppearance-->
-    <style name="hintTextAppearance" parent="TextAppearance.Design.Hint">
+    <style name="login_hintTextAppearance" parent="TextAppearance.Design.Hint">
         <item name="android:textColor">@android:color/white</item>
     </style>
 
-    <style name="EditTextControl" >
+    <style name="login_editTextControl" >
         <item name="colorControlNormal">@android:color/black</item>
         <item name="colorControlActivated">@android:color/white</item>
     </style>
 
 
-    <style name="EditText" >
+    <style name="login_editText" >
         <item name="android:textSize">20sp</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -82,14 +108,86 @@
     </style>
 
     <!--textAppearanceError registro-->
-    <style name="errorTextAppearance" parent="TextAppearance.AppCompat.Caption">
+    <style name="login_errorTextAppearance" parent="TextAppearance.AppCompat.Caption">
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">@android:color/holo_red_light</item>
+    </style>
+
+    <style name="login_tv_button">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textSize">@dimen/login_tv_size</item>
+
+
     </style>
 
     <!-- style recovery password-->
 
 
     <!-- style register-->
+
+    <!-- styles registro-->
+    <style name="register_inputLayoutConfirmation">
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/register_input_text_size</item>
+    </style>
+
+
+    <style name="register_EditTextControlConfirmation" >
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+    </style>
+
+    <style name="register_edittext">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:inputType">textEmailAddress</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textColorHint">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <!--<item name="android:gravity">center_horizontal</item>-->
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:background">@drawable/register_textview_backround</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingRight">2dp</item>
+        <item name="android:paddingBottom">2dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLength">150</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:digits">@string/register_characters_mail</item>
+    </style>
+
+    <!--estilo hintTextAppearance-->
+    <style name="register_hintTextAppearance" parent="TextAppearance.Design.Hint">
+        <item name="android:textColor">@color/colorText</item>
+    </style>
+
+    <!--estilo hintTextAppearance-->
+    <style name="register_confirmationHintTextAppearance" parent="TextAppearance.Design.Hint">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+    <style name="register_radio_btn">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingRight">@dimen/register_rbtn_horizontal_padding</item>
+        <item name="android:paddingLeft">@dimen/register_rbtn_horizontal_padding</item>
+        <item name="android:paddingTop">@dimen/register_rbtn_vertical_padding</item>
+        <item name="android:paddingBottom">@dimen/register_rbtn_vertical_padding</item>
+    </style>
+
+
+    <style name="register_checkbox">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">6dp</item>
+        <item name="android:textColor">@color/font</item>
+    </style>
+
+
 
 </resources>
