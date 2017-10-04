@@ -7,24 +7,50 @@
     android:background="@drawable/fondo_activity"
     tools:context="com.example.administrador.androidmvp.recoveryPass.RecoveryActivity">
 
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbar_recovery"/>
+
+
     <ImageView
         android:id="@+id/logo"
         style="@style/logo"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="@dimen/login_margin_top" />
+
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_recovery" />
 
     <TextView
         style="@style/title"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
         android:gravity="center"
-        android:text="@string/login_text_tv_title"
+        android:text="@string/recovery_title"
         android:textColor="@color/colorPrimary"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/recovery_tv_title" />
 
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/recovery_input_layout_correo"
+        style="@style/login_inputLayout"
+        app:errorEnabled="true"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
 
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        app:hintTextAppearance="@style/login_hintTextAppearance"
+        app:layout_constraintBottom_toBottomOf="parent"
 
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <EditText
+            android:id="@+id/recovery_input_user"
+            style="@style/login_editText"
+            android:hint="@string/login_text_hint_mail"
+            android:inputType="textEmailAddress"
+            app:theme="@style/login_editTextControl" />
+
+    </android.support.design.widget.TextInputLayout>
 
 </android.support.constraint.ConstraintLayout>

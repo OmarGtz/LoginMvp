@@ -18,12 +18,13 @@
     <string name="login_text_progres_bar_text">Iniciando sesión</string>
     <string name="login_text_welcome">Bienvenido</string>
     <string name="login_text_mail_invalid">correo electrónico invalido.</string>
+    <string name="login_remember_password">Recordar contraseña</string>
 
 
 
     <!--register-->
     <string name="register_title_toolbar">Registro</string>
-    <string name="register_title">Registrate</string>
+    <string name="register_title">¡REGISTRATE!</string>
     <string name="register_hint_name">Nombre</string>
     <string name="register_hint_lastname_p">Apellido paterno</string>
     <string name="register_hint_mail">Correo electrónico</string>
@@ -43,8 +44,28 @@
     <string name="register_error_confirme_pass">Las contraseñas no coinciden</string>
     <string name="register_error_terms_no_acept">Debes aceptar términos y condiciones</string>
     <string name="register_characters_mail">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@.-_1234567890</string>
-    <string name="register_aviso_privacity">Aviso de privacidad</string>
-    <string name="register_aviso_legal">Aviso_legal</string>
+    <string name="register_aviso_privacity"><u>Aviso de privacidad</u></string>
+    <string name="register_aviso_legal"><u>Aviso legal</u></string>
+
+
+    <!-- recuperar contraseña-->
+    <string name="recovery_title_toobar">Recuperación</string>
+    <string name="recovery_title">Recuperar contraseña</string>
+    <string name="recovery_error_envio">Error de envió, Revise su conexión.</string>
+    <string name="recovery_correo_enviado">Se envió correo de recuperación.</string>
+    <string name="recovery_correo_no_registrado">Correo electrónico no registrado.</string>
+    <string name="recovery_correo_vacio">Ingrese un correo electrónico.</string>
+    <string name="recovery_correo_invalido">correo electrónico invalido.</string>
+
+    <!-- terminos y condiciones -->
+    <string name="terms_btn_Aceptar">Aceptar</string>
+    <string name="terms_rb_terms">Términos y condiciones</string>
+    <string name="terms_rb_politics">Politicas de privacidad</string>
+
+    <!-- recuperar contraseña-->
+
+
+
 
 
 </resources>

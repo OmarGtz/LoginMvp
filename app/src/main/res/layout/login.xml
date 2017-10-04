@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_activity"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/logoo"
+        style="@style/login_logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tv_bienvenido"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_bienvenido"
+        android:text="@string/login_text_tv_title"
+        style="@style/login_title"
+        app:layout_constraintTop_toBottomOf="@+id/logoo"
+        app:layout_constraintBottom_toTopOf="@+id/input_layout_correo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_correo"
+        style="@style/login_inputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        app:hintTextAppearance="@style/login_hintTextAppearance"
+        app:layout_constraintBottom_toBottomOf="@id/input_layout_pas"
+        app:layout_constraintTop_toBottomOf="@+id/tv_bienvenido"
+        app:layout_constraintRight_toRightOf="parent"
+
+        app:layout_constraintLeft_toLeftOf="parent">
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/login_input_user"
+            style="@style/login_editText"
+            android:hint="@string/login_text_hint_mail"
+            android:inputType="textEmailAddress"
+            app:theme="@style/login_editTextControl" />
+
+
+    </android.support.design.widget.TextInputLayout>
+
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_pas"
+        style="@style/login_inputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        app:hintTextAppearance="@style/login_hintTextAppearance"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_layout_correo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/login_input_pass"
+            style="@style/login_editText"
+            android:hint="@string/login_text_hint_pass"
+            android:inputType="textPassword"
+            app:theme="@style/login_editTextControl" />
+
+    </android.support.design.widget.TextInputLayout>
+
+
+</android.support.constraint.ConstraintLayout>
