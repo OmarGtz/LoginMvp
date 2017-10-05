@@ -9,40 +9,48 @@
 
 
     <include layout="@layout/toolbar"
-        android:id="@+id/toolbar_recovery"/>
-
-
-    <ImageView
-        android:id="@+id/logo"
-        style="@style/logo"
+        android:id="@+id/recovery_toolbar"
+        android:layout_width="0dp"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/register_logo"
+        android:layout_height="?attr/actionBarSize" />
 
-        app:layout_constraintTop_toBottomOf="@+id/toolbar_recovery" />
+    <ImageView
+        android:id="@+id/register_logo"
+        style="@style/logo"
+        app:layout_constraintTop_toBottomOf="@+id/recovery_toolbar"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/recovery_title"
+        android:layout_marginTop="0dp" />
 
     <TextView
         style="@style/title"
-        android:gravity="center"
         android:text="@string/recovery_title"
-        android:textColor="@color/colorPrimary"
-        android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@+id/logo"
+        android:id="@+id/recovery_title"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/register_logo"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:id="@+id/recovery_tv_title" />
+        app:layout_constraintBottom_toTopOf="@+id/register_input_name"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" />
+
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/recovery_input_layout_correo"
         style="@style/login_inputLayout"
         app:errorEnabled="true"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-
-        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="42dp"
+        android:layout_marginLeft="42dp"
         app:hintTextAppearance="@style/login_hintTextAppearance"
         app:layout_constraintBottom_toBottomOf="parent"
-
-        app:layout_constraintTop_toTopOf="parent"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/recovery_title"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
 
         <EditText
             android:id="@+id/recovery_input_user"

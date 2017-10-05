@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -11,20 +10,21 @@
     <ImageView
         android:id="@+id/login_logo"
         style="@style/login_logo"
+        app:layout_constraintVertical_chainStyle="spread_inside"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/tv_bienvenido"
-         />
+        android:layout_marginTop="@dimen/login_margin_top" />
 
     <TextView
         android:id="@+id/tv_bienvenido"
         android:text="@string/login_text_tv_title"
         style="@style/login_title"
-        app:layout_constraintRight_toRightOf="@+id/login_logo"
-        app:layout_constraintLeft_toLeftOf="@+id/login_logo"
-        app:layout_constraintTop_toBottomOf="@+id/login_logo" />
-
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/login_input_layout_correo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_logo"/>
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/login_input_layout_correo"
@@ -32,10 +32,9 @@
         app:errorEnabled="true"
         app:layout_constraintTop_toBottomOf="@+id/tv_bienvenido"
         app:hintTextAppearance="@style/login_hintTextAppearance"
-        app:layout_constraintRight_toRightOf="@+id/tv_bienvenido"
-        app:layout_constraintLeft_toLeftOf="@+id/tv_bienvenido"
-        android:layout_marginTop="18dp"
-        app:layout_constraintHorizontal_bias="0.504">
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/login_input_layout_pas">
         <android.support.design.widget.TextInputEditText
             android:id="@+id/login_input_user"
             style="@style/login_editText"
@@ -50,11 +49,10 @@
         style="@style/login_inputLayout"
         app:hintTextAppearance="@style/login_hintTextAppearance"
         app:errorEnabled="true"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_input_layout_correo"
-        app:layout_constraintRight_toRightOf="@+id/login_input_layout_correo"
-        app:layout_constraintLeft_toLeftOf="@+id/login_input_layout_correo"
-        android:layout_marginTop="52dp"
-        app:layout_constraintHorizontal_bias="0.0">
+        app:layout_constraintBottom_toTopOf="@+id/login_cb_remember_pass">
 
         <android.support.design.widget.TextInputEditText
             android:id="@+id/login_input_pass"
@@ -63,49 +61,45 @@
             android:inputType="textPassword"
             app:theme="@style/login_editTextControl" />
 
-        </android.support.design.widget.TextInputLayout>
+    </android.support.design.widget.TextInputLayout>
 
-            <android.support.v7.widget.AppCompatCheckBox
-                android:id="@+id/login_cb_terminos_condiciones"
-                style="@style/register_checkbox"
-                android:text="@string/login_text_remember_password"
-                app:layout_constraintTop_toBottomOf="@+id/login_input_layout_pas"
-                app:buttonTint="@color/colorPrimary"
-                app:layout_constraintRight_toRightOf="@+id/login_input_layout_pas"
-                app:layout_constraintLeft_toLeftOf="@+id/login_input_layout_pas"
-                 />
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/login_cb_remember_pass"
+        style="@style/register_checkbox"
+        android:text="@string/login_text_remember_password"
+        app:layout_constraintTop_toBottomOf="@+id/login_input_layout_pas"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:buttonTint="@color/colorPrimary"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/login_btn_iniciar" />
+    <Button
+        android:textColor="@android:color/white"
+        android:id="@+id/login_btn_iniciar"
+        style="@style/login_btn"
+        android:text="@string/login_text_btn_login_text"
+        app:layout_constraintTop_toBottomOf="@id/login_cb_remember_pass"
+        app:layout_constraintBottom_toTopOf="@+id/login_tv_recovery"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
+    <TextView
+        android:id="@+id/login_tv_recovery"
+        android:text="@string/login_text_tv_recuperar"
+        style="@style/login_tv_button"
+        app:layout_constraintTop_toBottomOf="@+id/login_btn_iniciar"
+        app:layout_constraintBottom_toTopOf="@+id/login_tv_registrarse"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
-        <Button
-            android:textColor="@android:color/white"
-            android:id="@+id/login_btn_iniciar"
-            style="@style/login_btn"
-            android:text="@string/login_text_btn_login_text"
-            app:layout_constraintTop_toBottomOf="@id/login_cb_terminos_condiciones"
-            app:layout_constraintBottom_toTopOf="@+id/login_tv_recovery"
-            app:layout_constraintRight_toRightOf="@+id/login_cb_terminos_condiciones"
-
-            app:layout_constraintLeft_toLeftOf="@+id/login_cb_terminos_condiciones"
-             />
-
-
-        <TextView
-            android:id="@+id/login_tv_recovery"
-            android:text="@string/login_text_tv_recuperar"
-            style="@style/login_tv_button"
-            app:layout_constraintTop_toBottomOf="@+id/login_btn_iniciar"
-            app:layout_constraintLeft_toLeftOf="@+id/login_btn_iniciar"
-            app:layout_constraintBottom_toTopOf="@+id/login_tv_registrarse"
-            app:layout_constraintRight_toRightOf="@+id/login_btn_iniciar" />
-
-        <TextView
-            android:id="@+id/login_tv_registrarse"
-            android:text="@string/login_text_tv_crear_cuenta"
-            style="@style/login_tv_button"
-            app:layout_constraintTop_toBottomOf="@+id/login_tv_recovery"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="@+id/login_tv_recovery"
-            app:layout_constraintRight_toRightOf="@+id/login_tv_recovery" />  <!--
-    -->
+    <TextView
+        android:id="@+id/login_tv_registrarse"
+        android:text="@string/login_text_tv_crear_cuenta"
+        style="@style/login_tv_button"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/login_tv_recovery"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 
 </android.support.constraint.ConstraintLayout>

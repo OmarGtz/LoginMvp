@@ -30,10 +30,9 @@
     <string name="register_hint_mail">Correo electrónico</string>
     <string name="register_hint_pass">Contraseña</string>
     <string name="register_hint_confirm_password">Confirmar contraseña</string>
-    <string name="register_terms_conditions"> <u>términos y condiciones</u></string>
     <string name="register_rb_femenino">Femenino</string>
     <string name="register_rb_masculino">Masculino</string>
-    <string name="register_terms_aceptar">Aceptar</string>
+    <string name="register_terms_aceptar">Acepto terminos y condiciones</string>
     <string name="register_error_name_empty">Ingresa tu nombre(s).</string>
     <string name="register_error_lastname_empty">Ingresa tu apellido.</string>
     <string name="register_error_mail_empty">Ingresa tu correo.</string>
@@ -46,6 +45,7 @@
     <string name="register_characters_mail">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@.-_1234567890</string>
     <string name="register_aviso_privacity"><u>Aviso de privacidad</u></string>
     <string name="register_aviso_legal"><u>Aviso legal</u></string>
+    <string name="register_terms_conditions">Acepto terminos y condiciones</string>
 
 
     <!-- recuperar contraseña-->
