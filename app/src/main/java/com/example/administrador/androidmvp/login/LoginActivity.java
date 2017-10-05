@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.AppCompatCheckBox;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,6 +28,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView, View.
     private TextInputLayout inputLayoutCorreo;
     private TextInputLayout inputLayoutPass;
     private ProgressDialog progressDialog;
+    AppCompatCheckBox cb;
 
     //variables
     private String user;
@@ -81,8 +83,8 @@ public class LoginActivity extends AppCompatActivity implements LoginView, View.
 
     @Override
     public void initViews() {
-        inputLayoutCorreo = (TextInputLayout)findViewById(R.id.input_layout_correo);
-        inputLayoutPass = (TextInputLayout)findViewById(R.id.input_layout_pas);
+        inputLayoutCorreo = (TextInputLayout)findViewById(R.id.login_input_layout_correo);
+        inputLayoutPass = (TextInputLayout)findViewById(R.id.login_input_layout_pas);
         btnIniciar = (Button)findViewById(R.id.login_btn_iniciar);
         tvRegistrarse = (TextView)findViewById(R.id.login_tv_registrarse);
         tvRecovery = (TextView)findViewById(R.id.login_tv_recovery);
@@ -149,10 +151,9 @@ public class LoginActivity extends AppCompatActivity implements LoginView, View.
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            //si se presiona iniciar sesion
-            case R.id.login_btn_iniciar:
-
-                presenter.validateLogin(inputUsuario.getText().toString(),inputPass.getText().toString());
+           // si se presiona iniciar sesion
+           case R.id.login_btn_iniciar:
+               presenter.validateLogin(inputUsuario.getText().toString(),inputPass.getText().toString());
                 break;
 
             //si se presiona registrarse

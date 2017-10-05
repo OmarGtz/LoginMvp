@@ -18,7 +18,7 @@
     <string name="login_text_progres_bar_text">Iniciando sesión</string>
     <string name="login_text_welcome">Bienvenido</string>
     <string name="login_text_mail_invalid">correo electrónico invalido.</string>
-    <string name="login_remember_password">Recordar contraseña</string>
+    <string name="login_text_remember_password">Recordar contraseña</string>
 
 
 
