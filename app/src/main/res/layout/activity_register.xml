@@ -22,69 +22,45 @@
         app:layout_constraintTop_toBottomOf="@+id/register_toolbar"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-
         app:layout_constraintBottom_toTopOf="@+id/register_title"
-        android:layout_marginTop="0dp" />
+         />
 
     <TextView
         style="@style/title"
         android:text="@string/register_title"
         android:id="@+id/register_title"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="@dimen/marginTop_view"
         app:layout_constraintTop_toBottomOf="@+id/register_logo"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/register_input_name"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content" />
-    <!--
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.502">
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            tools:layout_editor_absoluteY="0dp"
-            tools:layout_editor_absoluteX="8dp">
+
 -->
             <EditText
                 android:id="@+id/register_input_name"
                 style="@style/register_edittext"
-                android:inputType="text"
-                android:layout_height="wrap_content"
-                android:layout_width="0dp"
+                android:inputType="textPersonName"
                 android:background="@drawable/register_textview_backround"
                 android:hint="@string/register_hint_name"
                 app:layout_constraintBottom_toTopOf="@+id/register_input_lastname"
                 app:layout_constraintTop_toBottomOf="@+id/register_title"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                android:layout_marginTop="10dp"
-                app:layout_constraintHorizontal_bias="0.0" />
+                app:layout_constraintLeft_toLeftOf="parent" />
 
 
            <EditText
                 android:id="@+id/register_input_lastname"
                 style="@style/register_edittext"
                 android:inputType="text"
-                android:layout_height="wrap_content"
                 android:background="@drawable/register_textview_backround"
                 android:hint="@string/register_hint_lastname_p"
-                android:layout_width="0dp"
                 app:layout_constraintBottom_toTopOf="@+id/register_input_mail"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/register_input_name"
-               android:layout_marginTop="9dp"
-               app:layout_constraintHorizontal_bias="0.0" />
+               />
 
 
 
@@ -126,12 +102,11 @@
         <RadioGroup
             android:id="@+id/register_rg_sexo"
             android:layout_width="0dp"
-            android:layout_marginLeft="42dp"
-            android:layout_marginRight="42dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
             android:orientation="horizontal"
+            android:layout_marginTop="@dimen/login_margin_top"
             app:layout_constraintTop_toBottomOf="@+id/register_input_confirm_password"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -141,38 +116,21 @@
                 android:id="@+id/rbGeneroMasculino"
                 style="@style/register_radio_btn"
                 android:layout_weight="1"
-                android:paddingRight="16dp"
-                android:paddingLeft="16dp"
-                android:paddingTop="6dp"
-                android:textColorHint="@color/colorCielo"
-                android:paddingBottom="6dp"
-                android:background="@drawable/radio_btn_background"
-                android:button="@null"
-                android:gravity="center"
-                android:text="@string/register_rb_masculino"
-                android:textColor="@drawable/color_state_rb" />
+                android:text="@string/register_rb_masculino"/>
 
             <RadioButton
                 android:id="@+id/rbGeneroFemenino"
                 style="@style/register_radio_btn"
-                android:gravity="center"
                 android:layout_weight="1"
-                android:paddingRight="16dp"
-                android:paddingLeft="16dp"
-                android:paddingTop="6dp"
-                android:paddingBottom="6dp"
-                android:background="@drawable/radio_btn_background"
-                android:button="@null"
-                android:text="@string/register_rb_femenino"
-                android:textColor="@drawable/color_state_rb" />
+                android:text="@string/register_rb_femenino" />
         </RadioGroup>
 
 
     <android.support.v7.widget.AppCompatCheckBox
-        android:layout_marginLeft="42dp"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
         android:id="@+id/register_cb_terminos_condiciones"
         style="@style/register_checkbox"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="@dimen/marginTop_view"
         android:text="@string/register_terms_aceptar"
         app:layout_constraintTop_toBottomOf="@+id/register_rg_sexo"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -181,87 +139,27 @@
 
     <TextView
         android:id="@+id/register_tv_privacidad"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:clickable="true"
-        android:layout_marginLeft="42dp"
+        style="@style/register_tv_button"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintTop_toBottomOf="@+id/register_cb_terminos_condiciones"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/register_tv_legal"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_width="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/marginTop_view"
         android:text="@string/register_aviso_privacity" />
 
     <TextView
-        android:layout_marginRight="42dp"
         android:id="@+id/register_tv_legal"
-        android:textColor="@android:color/black"
-        android:clickable="true"
-        android:layout_width="wrap_content"
-        android:layout_marginBottom="8dp"
-
-        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/marginTop_view"
+        style="@style/register_tv_button"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
         app:layout_constraintTop_toBottomOf="@+id/register_cb_terminos_condiciones"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/register_tv_privacidad"
         android:text="@string/register_aviso_legal"/>
-
-
-    <!--
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    tools:layout_editor_absoluteY="0dp"
-                    tools:layout_editor_absoluteX="8dp">
-                    <CheckBox
-                        android:id="@+id/chbTerminosCondiciones"
-                        style="@style/register_checkbox" />
-                    <TextView
-                        android:textColor="@android:color/white"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="5dp"
-                        android:layout_gravity="center_vertical"
-                        android:text="@string/register_terms_aceptar"/>
-                    <TextView
-                        android:id="@+id/register_tv_politicas"
-                        android:textColor="@android:color/black"
-                        android:clickable="true"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/register_terms_conditions"/>
-                        -->
-<!--
-            </LinearLayout>
-
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                tools:layout_editor_absoluteY="0dp"
-                tools:layout_editor_absoluteX="8dp">
-                <TextView
-                    android:id="@+id/registro_tv_privacidad"
-                    android:textColor="@android:color/black"
-                    android:clickable="true"
-                    android:layout_width="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_height="wrap_content"
-                    android:text="@string/register_aviso_privacity"/>
-                <TextView
-                    android:id="@+id/registro_tv_legal"
-                    android:textColor="@android:color/black"
-                    android:clickable="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/register_aviso_legal"/>
-
-            </RelativeLayout>
-        </LinearLayout>
-    </ScrollView>
-    -->
 
 </android.support.constraint.ConstraintLayout>

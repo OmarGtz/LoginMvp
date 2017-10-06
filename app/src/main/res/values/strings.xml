@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">AndroidMvp</string>
 
-    <!--Login-->
-    <string name="login_text_mail_empty">Ingresa un correo</string>
-    <string name="login_text_pass_empty">Ingresa la contraseña</string>
+    <!-- text Login-->
+    <string name="login_text_error_mail_empty">Ingresa un correo</string>
+    <string name="login_text_error_pass_empty">Ingresa la contraseña</string>
     <string name="login_text_hint_pass">Contraseña</string>
     <string name="login_text_hint_mail">Correo electrónico</string>
     <string name="login_text_btn_login_text">Iniciar</string>
@@ -17,12 +17,10 @@
     <string name="login_text_error_login">Contraseña o correo invalidos.</string>
     <string name="login_text_progres_bar_text">Iniciando sesión</string>
     <string name="login_text_welcome">Bienvenido</string>
-    <string name="login_text_mail_invalid">correo electrónico invalido.</string>
-    <string name="login_text_remember_password">Recordar contraseña</string>
+    <string name="login_text_error_mail_invalid">correo electrónico invalido.</string>
+    <string name="login_text_cb_remember_password">Recordar contraseña</string>
 
-
-
-    <!--register-->
+    <!--text register--><!-- text register -->
     <string name="register_title_toolbar">Registro</string>
     <string name="register_title">¡REGISTRATE!</string>
     <string name="register_hint_name">Nombre</string>
@@ -62,10 +60,86 @@
     <string name="terms_rb_terms">Términos y condiciones</string>
     <string name="terms_rb_politics">Politicas de privacidad</string>
 
-    <!-- recuperar contraseña-->
+    <string name="terminos_y_condiciones">
+        Términos y condiciones legales
+        \n\n
+        Los presentes términos y condiciones generales son  aplicables al uso de la plataforma tecnológica ofrecida por Fundación Best, A.C., sus marcas registradas, sus licenciatarios y/o filiales dentro de la App denominada Doctor Go. Si usted no acepta estas Condiciones, no podrá acceder o usar los servicios de Doctor Go. El Usuario debe leer, entender y aceptar todas las condiciones establecidas en los Términos y Condiciones Generales y en el Aviso de Privacidad, previo a su inscripción como Usuario de Doctor Go.
+        \n\n
+        Los servicios ofrecidos por Fundación Best, A.C. solamente constituyen  una plataforma de tecnología que permite a los usuarios de aplicaciones móviles , en este caso Doctor Go,  organizar y planear  los servicios médicos a domicilio  proporcionados por terceros independientes (profesionales de la salud).   Fundación Best, A.C. no respalda ni es responsable por dichos servicios de terceros.  Asimismo, Fundación Best, A.C.  no será responsable de daños indirectos, incidentales, especiales, punitivos o emergentes, la pérdida de datos, la lesión personal o el daño a la propiedad, ni de perjuicios relativos a los servicios proporcionados por terceros (profesionales de la salud)
+        \n\n
+        La plataforma tecnológica mencionada es solo para su uso personal, no comercial. Usted reconoce que Fundación Best, A.C.  no presta servicios médicos ni de atención médica por profesionales de la salud, sino que dichos servicios se prestan por terceros independientes que no están empleados por Fundación Best, A.C.
+        \n\n
+        1.- CAPACIDAD
+        Los servicios médicos proporcionados por terceros independientes a través de la plataforma tecnológica proporcionada por Fundación Best, A.C.  (en lo sucesivo “los servicios”), sólo están disponibles para personas que tengan capacidad legal para contratar y residir dentro de la República Mexicana. No podrán utilizar los servicios las personas que no tengan esa capacidad ni por menores de edad.
+        \n\n
+        2.- INSCRIPCIÓN
+        Usted podrá descargar la Aplicación de Doctor Go, y con el fin de acceder a “los servicios”, deberá proporcionar información personal para registrarse y crear una cuenta personal ("cuenta"). La recopilación y el uso de la información personal que proporcione es conforme a lo dispuesto en la Política Privacidad (“Aviso de Privacidad), el cual lo puede usted consultar en nuestra página www.fundacionbest.org.mx
+        \n\n
+        3.- TITULARIDAD.
+        Todos los derechos de propiedad industrial relativos a estos son y seguirán siendo propiedad de Fundación Best, A.C.. Ninguna de estas Condiciones ni el uso de los Servicios transferirán ningún derecho respecto de los servicios o bien, a utilizar las marcas, logotipos y/o diseños.
+        No se podrá retirar cualquier distintivo sobre derechos de autor y/o marca registrada respecto de la App y/o de los servicios, no se podrá reproducir, modificar, realizar obras derivadas sobre los Servicios y/o la App, distribuir, licenciar, arrendar, revender, transferir, exhibir públicamente, presentar públicamente, transmitir, retransmitir o explotar de otra forma los Servicios, excepto cuando se permita expresamente por Fundación Best, A.C.
+        \n\n
+        4.-  ACCESO A LA RED.
+        El usuario es responsable de obtener el acceso a la red de datos necesario para utilizar los Servicios. Se aplicarán las tarifas y tasas de datos de su proveedor de telefonía móvil y usted será responsable del  pago de dichas tarifas y tasas,  además, la funcionalidad de la plataforma tecnológica podrá ser objeto de disfunciones o retrasos inherentes al uso de Internet y de las comunicaciones electrónicas.
+        \n\n
+        5.- ATENCIÓN MÉDICA  A DOMICILIO
+        Doctor Go  es un proveedor que proporciona información y un medio (plataforma electrónica) para conectar a los Usuarios, con Profesionales de la Salud independientes, con cédula profesional para la práctica de la medicina en México (en lo sucesivo el Médico) ofreciendo servicios médicos (no de emergencia),a pacientes adultos y menores de edad en la comodidad de su casa, oficina o el lugar donde se encuentre y donde desee que le brinden la atención médica señalada a través de su Aplicación móvil.
+        Cuando el Usuario genere una solicitud de visita a domicilio desde la Aplicación mediante una solicitud de CONTACTO (Solicitud)  la Aplicación transmitirá automáticamente su ubicación (Geolocalización), y ésta se utilizará para determinar si los profesionales de la salud independientes prestan atención médica en su área geográfica.
+        Al generar el Usuario una Solicitud y proporcionar la información requerida para el contacto del profesional de la salud suscrito en la plataforma electrónica de Doctor Go y si éste se encuentra disponible, aparecerá de forma inmediata en la Aplicación del usuario solicitante una notificación con el tiempo estimado de llegada del médico al domicilio que usted haya señalado al momento de solicitar el servicio.
+        Si está utilizando la Aplicación para solicitar atención médica para un menor de edad, usted debe ser su padre o tutor o el titular del registro de la App, además, un mayor de edad responsable legalmente del menor debe estar presente y disponible durante la visita del médico con el mismo.
+        Doctor Go podrá poner fin de inmediato a estas Condiciones o cualquiera de los Servicios o en general, dejar de ofrecer los Servicios, en cualquier momento y por cualquier motivo  Doctor Go podrá modificar las condiciones relativas a la plataforma tecnológica cuando lo considere oportuno. Las modificaciones serán efectivas después de la publicación por parte de Doctor Go de dichas Condiciones dentro de la Aplicación. El acceso o uso continuo de la Aplicación significará que acepta los Términos y Condiciones y sus modificaciones.
+        Se le indica al Usuario no utilizar nuestra aplicación con la finalidad de buscar servicios médicos de urgencia o de alta especialidad (cuando alguien esté inconsciente, no pueda respirar, esté sufriendo una reacción anafiláctica, tenga dolor de pecho, sangrado incontrolable, fracturas, o cualquier otro síntoma que requiera atención inmediata o de emergencia médica).
+        \n\n
+        6.- PAGO DE LOS SERVICIOS.
+        El Usuario realizará el pago en efectivo por el costo de la consulta directamente a el médico en el momento que termine la consulta. El costo de la consulta se mostrará en la pantalla al momento de realizar la solicitud. A partir de este momento el usuario tendrá la opción de aceptar o cancelar la solicitud.
+        La visita y atención médica a domicilio que se ofrece en la Aplicación de Doctor Go se cobrará en efectivo al Usuario una vez terminada la consulta médica a domicilio y se pagará directamente al médico que le prestó los servicios. El pago realizado de dicha manera se considerará como el pago efectuado directamente por usted al Tercero independiente.
+        Los Cargos pagados por usted al profesional de la salud independiente son definitivos y no reembolsables y Fundación Best, A.C. no será responsable por cualquier cobro, pago o reclamación al respecto.
+        \n\n
+        7.- FUNCIONALIDAD DE LA GEOLOCALIZACIÓN.
+        Los servicios incluyen y hacen uso de servicios prestados por terceros que permiten a Doctor Go  incluir mapas, lugares y otros contenidos de Google, Inc.  como parte de los Servicios. El uso de los servicios de geolocalización está sujeto a las actuales condiciones de uso de Google Maps / Google Earth  (http://www.google.com/intl/en_us/help/terms_maps.html) de Google y utilizando los servicios Geo-Ubicación, usted acepta que quedará vinculado a los Términos de uso de Google.
+        Es preciso mencionar que al momento de acceder a la plataforma tecnológica Doctor Go, el usuario permite el reconocimiento de su ubicación a los prestadores de servicios de la salud independientes registrados en la mencionada plataforma.
+        \n\n
+        8.- CANCELACIÓN DE SERVICIOS.
+        Si el Usuario decide cancelar algún servicio solicitado, en la Aplicación aparece el botón de cancelación, al cual deberá dar clic, y aparecerá el menú para que usted indique cual es el motivo por el que decide cancelar el servicio y su solicitud quedará cancelada inmediatamente y sin ningún costo.
+        \n\n
+        9.- RENUNCIAS; LIMITACIÓN DE RESPONSABILIDAD E INDEMNIDAD.
+        El Usuario hará uso de la aplicación, de los servicios, incluyendo la atención médica de profesionales de la salud, y nuestro sitio web bajo su propio riesgo.
+        Doctor Go y/o Fundación Best, A. C. no será responsable de la exactitud, integridad, actualidad o eficacia del contenido de la aplicación, y no asume ninguna responsabilidad ante usted o cualquier menor de quien usted es responsable, de cualquier error, errores o inexactitudes en dicho contenido o en los servicios prestados por Doctor Go o los servicios, información y asesoramiento proporcionado por el médico o profesional de la salud, o a de nuestra  aplicación.
+        Doctor Go y/o Fundación Best, A. C. no garantiza la calidad de los servicios de los terceros proveedores. El Usuario acuerda que todo riesgo derivado de su uso de los servicios y cualquier servicio o bien solicitado en relación con aquellos será únicamente suyo, en la máxima medida permitida por la ley aplicable.
+        Doctor Go y/o Fundación Best, A. C. no será responsable de daños directos, indirectos, incidentales o emergentes derivados o como resultado del uso o la imposibilidad de uso de la aplicación, el costo de los servicios, o la atención médica brindada por el profesional de la salud. Si en alguna parte de esta limitación de responsabilidad de Docotr Go será determinada por la Ley aplicable.
+        Usted acepta sacar en paz y a salvo a Fundación Best, A.C. junto con sus funcionarios y empleados, de cualquier responsabilidad, sanciones, demandas, que surjan, como resultado de o en relación con: a) el uso de la Aplicación, Servicios o de nuestra página Aplicación o su incapacidad para utilizarla; o b)  la prestación de los servicios ofrecidos a través de la Aplicación por prestadores independientes.
+        Doctor Go y/o Fundación Best, A. C. no respalda expresamente ningún ejercicio de la medicina, a ningún médico u otro tipo de atención médica profesional en la aplicación. Cualquier declaración, opinión u otra información que pueda ser puesta a disposición por el médico son únicamente atribuibles a una atención médica o profesional de la salud y no a Doctor Go y/o Fundación Best, A. C., toda vez que únicamente proporciona una plataforma interactiva para la solicitud de datos y servicios.
+        Doctor Go y/o Fundación Best, A. C. no ofrece ninguna garantía en cuanto a la conducta, capacidad o la eficacia, exactitud, integridad, oportunidad o relevancia de la información proporcionada por la atención médica o profesional de la salud y/o de los servicios prestados por dichos profesionales de la salud o médicos o por terceros a través de nuestra aplicación.
+        \n\n
+        10. CESIÓN DE DERECHOS.
+        Fundación Best, A. C. podrá ceder sus derechos y obligaciones en virtud de su plataforma y de los términos y condiciones aquí señalados en el momento que así lo considere oportuno.
+        \n\n
+        11.- JURISDICCIÓN Y LEYES APLICABLES.
+        Este acuerdo de términos y condiciones contiene el acuerdo final y completo de la relación entre Doctor Go  y/o Fundación Best, A. C. y el Usuario y/o  cualquier menor a quien le sean brindados los servicios médicos. Usted acepta que este Acuerdo, así como cualquier y todas las reclamaciones derivadas del mismo, se regirán e interpretarán de conformidad con las Leyes vigentes aplicables en la Ciudad de México. Cualquier controversia derivada del presente acuerdo, su existencia, validez, interpretación, alcance o cumplimiento, será sometida a las leyes aplicables y a los Tribunales competente de la Ciudad de México, renunciando a cualquier fuero que en razón de su domicilio presente o futuro pudiera corresponderles a las partes.</string>
 
+    <!-- profile -->
 
+    <string name="aviso_de_privacidad">
+        Aviso de privacidad.
+        \n\nPara Fundación Best, A.C., con domicilio en Alemania número 10, Colonia Independencia, Delegación Benito Juárez, Ciudad de México, C.P. 03630, el tratamiento legítimo, controlado e informado de sus datos personales reitera nuestro compromiso con la privacidad y su derecho a la autodeterminación informativa. Los datos personales  y/o sensibles que nos proporcione, serán utilizados para finalidades primarias acorde con el presente aviso de privacidad o con las actualizaciones que, en su momento se pongan a su disposición, para cumplir con obligaciones de salud y otras obligaciones legales y/o contractuales, fines estadísticos y científicos, intercambiar información científica necesaria para atender un determinado padecimiento o emergencia de salud, hacer reportes a las autoridades sanitarias relativas a posibles experiencias adversas, y llevar  a cabo posibles inspecciones por parte de las autoridades.
+        \n\n
+        Si Usted desea conocer el contenido completo de nuestro aviso de privacidad, hágalo en nuestro sitio web http://www.fundacionbest.org.mx  ,sección aviso de privacidad o solicítelo por medio de un correo electrónico dirigido a la siguiente dirección: avisodeprivacidad@fundacionbest.org.mx  y/o  mediante  un escrito dirigido a Fundación Best, A.C., a la siguiente dirección: Alemania número 10, Colonia Independencia, Delegación Benito Juárez, Ciudad de México, C.P. 03630. Asimismo, se hace de su conocimiento que la aceptación del presente aviso de privacidad, implica la autorización para realizar llamadas o enviar mensajes de texto con fines mercadotécnicos o publicitarios, aun si Usted se encuentra inscrito en  el REPEP (Registro Público Para Evitar Publicidad).
+    </string>
 
-
+    <string name="profile_title_toolbar">Mi perfil</string>
+    <string name="profile_title">Perfil</string>
+    <string name="profile_hint_name">Nombre</string>
+    <string name="profile_hint_lastname_p">Apellido paterno</string>
+    <string name="profile_hint_lastname_m">Apellido materno</string>
+    <string name="profile_hint_mail">Correo electrónico</string>
+    <string name="profile_hint_cedule">Cédula profesional.</string>
+    <string name="profile_hint_telephone">Número de Teléfono</string>
+    <string name="profile_hint_birth_date">Fecha de Nacimiento</string>
+    <string name="profile_hint_pass">Contraseña</string>
+    <string name="profile_hint_confirme_new_pass">Confirmar contraseña</string>
+    <string name="profile_hint_new_pass">Nueva contraseña</string>
+    <string name="profile_rb_femenino">Femenino</string>
+    <string name="profile_rb_masculino">Masculino</string>
+    <string name="profile_title_update_pass">Actualizar contraseña (opcional)</string>
 
 </resources>

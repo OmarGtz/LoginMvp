@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#fafafa</color>
+    <color name="colorPrimary">#ffffff</color>
     <color name="colorPrimaryDark">#2192c8</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">@android:color/transparent</color>
     <color name="colorText">#FFFFFF</color>
     <color name="colorCielo">#2192c8</color>
+
     <!--agregados-->
-    <color name="hint">#FAFAFA</color>
-    <color name="font">#FAFAFA</color>
+
+    <!-- color hint edittext -->
+    <color name="hint">#ffffff</color>
+    <color name="font">#ffffff</color>
+
     <color name="background_button">#FAFAFA</color>
     <color name="colorStarsActivated">#FFBF00</color>
     <color name="colorStarNormal">#9E9E9E</color>

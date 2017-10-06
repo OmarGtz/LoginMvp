@@ -110,7 +110,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView, View.
     @Override
     public void setErrorEmptyUser() {
 
-        inputLayoutCorreo.setError(getResources().getString(R.string.login_text_mail_empty));
+        inputLayoutCorreo.setError(getResources().getString(R.string.login_text_error_mail_empty));
 
     }
 
@@ -138,13 +138,13 @@ public class LoginActivity extends AppCompatActivity implements LoginView, View.
     @Override
     public void setErrorEmptyPassword() {
 
-        inputLayoutPass.setError(getResources().getString(R.string.login_text_pass_empty));
+        inputLayoutPass.setError(getResources().getString(R.string.login_text_error_pass_empty));
 
     }
 
     @Override
     public void setErrorInvalidMail() {
-        inputLayoutCorreo.setError(getResources().getString(R.string.login_text_mail_invalid));
+        inputLayoutCorreo.setError(getResources().getString(R.string.login_text_error_mail_invalid));
 
     }
 

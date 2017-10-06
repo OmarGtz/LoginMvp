@@ -1,0 +1,201 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/fondo_activity"
+    android:layout_width="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:layout_height="match_parent">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_photo_profile"
+        style="@style/profile_ic_profile"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/profile_title" />
+
+    <TextView
+        android:text="OmarGtz1608@gmail.com"
+        android:id="@+id/profile_title"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@+id/profile_photo_profile"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/profile_input_name"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" />
+
+    <EditText
+        android:id="@+id/profile_input_name"
+        style="@style/profile_edittext"
+        android:inputType="text"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:background="@drawable/register_textview_backround"
+        android:hint="@string/profile_hint_name"
+        app:layout_constraintBottom_toTopOf="@+id/profile_input_lastname_P"
+        app:layout_constraintTop_toBottomOf="@+id/profile_title"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+        android:id="@+id/profile_input_lastname_P"
+        style="@style/profile_edittext"
+        android:inputType="text"
+        android:layout_height="wrap_content"
+        android:background="@drawable/register_textview_backround"
+        android:hint="@string/profile_hint_lastname_p"
+        android:layout_width="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/profile_input_lasname_m"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_input_name" />
+
+    <EditText
+        android:id="@+id/profile_input_lasname_m"
+        style="@style/profile_edittext"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/register_textview_backround"
+        android:hint="@string/profile_hint_lastname_m"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/profile_input_cedule"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_input_lastname_P"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp" />
+
+    <EditText
+        android:id="@+id/profile_input_cedule"
+        style="@style/profile_edittext"
+        android:background="@drawable/register_textview_backround"
+        android:hint="@string/profile_hint_cedule"
+        app:layout_constraintBottom_toTopOf="@+id/profile_input_telephone"
+        android:inputType="number"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_input_lasname_m"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp" />
+
+    <EditText
+        android:id="@+id/profile_input_telephone"
+        style="@style/profile_edittext"
+        android:inputType="text"
+        android:background="@drawable/register_textview_backround"
+        android:hint="@string/profile_hint_telephone"
+        app:layout_constraintTop_toBottomOf="@+id/profile_input_cedule"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/profile_input_date"
+        android:layout_width="0dp" />
+
+
+    <EditText
+        android:id="@+id/profile_input_date"
+        style="@style/profile_edittext"
+        android:inputType="date"
+        android:background="@drawable/register_textview_backround"
+        android:hint="@string/profile_hint_birth_date"
+        app:layout_constraintTop_toBottomOf="@+id/profile_input_telephone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/profile_rg_sexo"
+        android:layout_width="0dp" />
+
+    <RadioGroup
+        android:id="@+id/profile_rg_sexo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/profile_text_opc"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/profile_input_date"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        >
+
+        <RadioButton
+            android:id="@+id/rbGeneroMasculino"
+            style="@style/register_radio_btn"
+            android:layout_weight="1"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="4dp"
+            android:textSize="13sp"
+            android:textColorHint="@color/colorCielo"
+            android:paddingBottom="4dp"
+            android:background="@drawable/radio_btn_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/register_rb_masculino"
+            android:textColor="@drawable/color_state_rb" />
+
+        <RadioButton
+            android:id="@+id/rbGeneroFemenino"
+            style="@style/register_radio_btn"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:layout_weight="1"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:background="@drawable/radio_btn_background"
+            android:button="@null"
+            android:text="@string/register_rb_femenino"
+            android:textColor="@drawable/color_state_rb" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/profile_text_opc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Opcionales"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_rg_sexo"
+        app:layout_constraintBottom_toTopOf="@+id/profile_input_pass"
+        android:textColor="@color/font"
+        android:textSize="15sp"/>
+
+    <EditText
+        android:id="@+id/profile_input_pass"
+        style="@style/profile_edittext"
+        android:inputType="text"
+        android:background="@drawable/register_textview_backround"
+        android:hint="@string/profile_hint_pass"
+        app:layout_constraintTop_toBottomOf="@+id/profile_text_opc"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/profile_input_new_pass"
+        android:layout_width="0dp" />
+
+    <EditText
+        android:id="@+id/profile_input_new_pass"
+        style="@style/profile_edittext"
+        android:inputType="date"
+        android:background="@drawable/register_textview_backround"
+        android:hint="@string/profile_hint_new_pass"
+        app:layout_constraintTop_toBottomOf="@+id/profile_input_pass"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/profile_input_confirm_new_pass"
+        android:layout_width="0dp" />
+
+    <EditText
+        android:id="@+id/profile_input_confirm_new_pass"
+        style="@style/profile_edittext"
+        android:inputType="date"
+        android:background="@drawable/register_textview_backround"
+        android:hint="@string/profile_hint_confirme_new_pass"
+        app:layout_constraintTop_toBottomOf="@+id/profile_input_new_pass"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_width="0dp" />
+
+</android.support.constraint.ConstraintLayout>

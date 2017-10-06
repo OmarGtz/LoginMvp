@@ -10,7 +10,6 @@
     <ImageView
         android:id="@+id/login_logo"
         style="@style/login_logo"
-        app:layout_constraintVertical_chainStyle="spread_inside"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -66,7 +65,7 @@
     <android.support.v7.widget.AppCompatCheckBox
         android:id="@+id/login_cb_remember_pass"
         style="@style/register_checkbox"
-        android:text="@string/login_text_remember_password"
+        android:text="@string/login_text_cb_remember_password"
         app:layout_constraintTop_toBottomOf="@+id/login_input_layout_pas"
         app:layout_constraintLeft_toLeftOf="parent"
         app:buttonTint="@color/colorPrimary"
