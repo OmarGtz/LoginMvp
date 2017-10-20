@@ -33,8 +33,7 @@
             android:textColor="@color/colorText"
             android:gravity="left"
             android:textSize="13sp"
-            android:text="@string/aviso_de_privacidad"
-             />
+            />
 
     </ScrollView>
 

@@ -1,11 +1,12 @@
 <resources>
     <string name="app_name">AndroidMvp</string>
 
-    <!-- text Login-->
+    <!-- text Login--><!-- recuperar contraseña-->
     <string name="login_text_error_mail_empty">Ingresa un correo</string>
     <string name="login_text_error_pass_empty">Ingresa la contraseña</string>
     <string name="login_text_hint_pass">Contraseña</string>
     <string name="login_text_hint_mail">Correo electrónico</string>
+
     <string name="login_text_btn_login_text">Iniciar</string>
     <string name="login_text_tv_olvide_contraseña">¿Olvidaste tu contraseña?</string>
     <string name="login_text_tv_recuperar">Olvidé mi contraseña</string>
@@ -45,8 +46,7 @@
     <string name="register_aviso_legal"><u>Aviso legal</u></string>
     <string name="register_terms_conditions">Acepto terminos y condiciones</string>
 
-
-    <!-- recuperar contraseña-->
+    <!-- recuperar contraseña--><!-- recuperar contraseña-->
     <string name="recovery_title_toobar">Recuperación</string>
     <string name="recovery_title">Recuperar contraseña</string>
     <string name="recovery_error_envio">Error de envió, Revise su conexión.</string>
@@ -55,12 +55,10 @@
     <string name="recovery_correo_vacio">Ingrese un correo electrónico.</string>
     <string name="recovery_correo_invalido">correo electrónico invalido.</string>
 
-    <!-- terminos y condiciones -->
+    <!-- terminos y condiciones --><!--  terminos y condiciones                       -->
     <string name="terms_btn_Aceptar">Aceptar</string>
-    <string name="terms_rb_terms">Términos y condiciones</string>
-    <string name="terms_rb_politics">Politicas de privacidad</string>
 
-    <string name="terminos_y_condiciones">
+    <string name="terms_terms_conditions">
         Términos y condiciones legales
         \n\n
         Los presentes términos y condiciones generales son  aplicables al uso de la plataforma tecnológica ofrecida por Fundación Best, A.C., sus marcas registradas, sus licenciatarios y/o filiales dentro de la App denominada Doctor Go. Si usted no acepta estas Condiciones, no podrá acceder o usar los servicios de Doctor Go. El Usuario debe leer, entender y aceptar todas las condiciones establecidas en los Términos y Condiciones Generales y en el Aviso de Privacidad, previo a su inscripción como Usuario de Doctor Go.
@@ -117,15 +115,16 @@
         11.- JURISDICCIÓN Y LEYES APLICABLES.
         Este acuerdo de términos y condiciones contiene el acuerdo final y completo de la relación entre Doctor Go  y/o Fundación Best, A. C. y el Usuario y/o  cualquier menor a quien le sean brindados los servicios médicos. Usted acepta que este Acuerdo, así como cualquier y todas las reclamaciones derivadas del mismo, se regirán e interpretarán de conformidad con las Leyes vigentes aplicables en la Ciudad de México. Cualquier controversia derivada del presente acuerdo, su existencia, validez, interpretación, alcance o cumplimiento, será sometida a las leyes aplicables y a los Tribunales competente de la Ciudad de México, renunciando a cualquier fuero que en razón de su domicilio presente o futuro pudiera corresponderles a las partes.</string>
 
-    <!-- profile -->
 
-    <string name="aviso_de_privacidad">
+    <string name="terms_aviso_de_privacidad">
         Aviso de privacidad.
         \n\nPara Fundación Best, A.C., con domicilio en Alemania número 10, Colonia Independencia, Delegación Benito Juárez, Ciudad de México, C.P. 03630, el tratamiento legítimo, controlado e informado de sus datos personales reitera nuestro compromiso con la privacidad y su derecho a la autodeterminación informativa. Los datos personales  y/o sensibles que nos proporcione, serán utilizados para finalidades primarias acorde con el presente aviso de privacidad o con las actualizaciones que, en su momento se pongan a su disposición, para cumplir con obligaciones de salud y otras obligaciones legales y/o contractuales, fines estadísticos y científicos, intercambiar información científica necesaria para atender un determinado padecimiento o emergencia de salud, hacer reportes a las autoridades sanitarias relativas a posibles experiencias adversas, y llevar  a cabo posibles inspecciones por parte de las autoridades.
         \n\n
         Si Usted desea conocer el contenido completo de nuestro aviso de privacidad, hágalo en nuestro sitio web http://www.fundacionbest.org.mx  ,sección aviso de privacidad o solicítelo por medio de un correo electrónico dirigido a la siguiente dirección: avisodeprivacidad@fundacionbest.org.mx  y/o  mediante  un escrito dirigido a Fundación Best, A.C., a la siguiente dirección: Alemania número 10, Colonia Independencia, Delegación Benito Juárez, Ciudad de México, C.P. 03630. Asimismo, se hace de su conocimiento que la aceptación del presente aviso de privacidad, implica la autorización para realizar llamadas o enviar mensajes de texto con fines mercadotécnicos o publicitarios, aun si Usted se encuentra inscrito en  el REPEP (Registro Público Para Evitar Publicidad).
     </string>
 
+
+    <!-- profile --><!-- profile -->
     <string name="profile_title_toolbar">Mi perfil</string>
     <string name="profile_title">Perfil</string>
     <string name="profile_hint_name">Nombre</string>

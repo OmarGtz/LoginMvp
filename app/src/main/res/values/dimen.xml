@@ -34,8 +34,4 @@
     <dimen name= "register_edittext_padding_horizontal">4dp</dimen>
     <dimen name= "register_edittext_padding_vertical">6dp</dimen>
 
-
-
-
-
 </resources>

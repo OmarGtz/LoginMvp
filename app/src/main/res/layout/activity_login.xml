@@ -72,7 +72,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/login_btn_iniciar" />
     <Button
-        android:textColor="@android:color/white"
         android:id="@+id/login_btn_iniciar"
         style="@style/login_btn"
         android:text="@string/login_text_btn_login_text"
