@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:layout_height="match_parent"
+    android:paddingTop="8dp"
+    android:background="@drawable/fondo_activity">
+
+    <ImageView
+        android:id="@+id/permisos_logo"
+        style="@style/logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/permisos_title" />
+
+    <TextView
+        style="@style/title"
+        android:text="¡Bienvenido a Doctor Go!"
+        android:id="@+id/permisos_title"
+        android:layout_marginTop="43dp"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@+id/permisos_logo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/register_input_name" />
+
+    <TextView
+        style="@style/title"
+        android:text="@string/permisos_text"
+        android:textSize="15sp"
+        android:id="@+id/permisos_text_body"
+        android:layout_marginTop="36dp"
+        android:textStyle="normal"
+        app:layout_constraintVertical_bias=".5"
+        app:layout_constraintTop_toBottomOf="@+id/permisos_title"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/register_input_name" />
+
+    <Button
+        android:id="@+id/login_btn_iniciar"
+        style="@style/login_btn"
+        android:text="Continuar"
+        app:layout_constraintTop_toBottomOf="@id/login_cb_remember_pass"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="65dp"
+        app:layout_constraintHorizontal_bias="0.502" />
+
+</android.support.constraint.ConstraintLayout>

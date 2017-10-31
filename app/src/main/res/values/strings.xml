@@ -123,7 +123,7 @@
         Si Usted desea conocer el contenido completo de nuestro aviso de privacidad, hágalo en nuestro sitio web http://www.fundacionbest.org.mx  ,sección aviso de privacidad o solicítelo por medio de un correo electrónico dirigido a la siguiente dirección: avisodeprivacidad@fundacionbest.org.mx  y/o  mediante  un escrito dirigido a Fundación Best, A.C., a la siguiente dirección: Alemania número 10, Colonia Independencia, Delegación Benito Juárez, Ciudad de México, C.P. 03630. Asimismo, se hace de su conocimiento que la aceptación del presente aviso de privacidad, implica la autorización para realizar llamadas o enviar mensajes de texto con fines mercadotécnicos o publicitarios, aun si Usted se encuentra inscrito en  el REPEP (Registro Público Para Evitar Publicidad).
     </string>
 
-
+    <string name="permisos_text">Es necesario aceptar algunos permisos que son necesarios para el funcionamiento de la aplicación.</string>
     <!-- profile --><!-- profile -->
     <string name="profile_title_toolbar">Mi perfil</string>
     <string name="profile_title">Perfil</string>
