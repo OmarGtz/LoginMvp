@@ -22,12 +22,9 @@ public class MainActivity extends AppCompatActivity implements MainView{
         presenter.getPreferencesUser();
     }
 
-
     @Override
     public void showUser(String user) {
-
         Toast.makeText(this,"user:"+user,Toast.LENGTH_SHORT).show();
-
     }
 
     @Override

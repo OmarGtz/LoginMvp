@@ -12,6 +12,7 @@ public interface SplashInteractor {
     public interface OnNavigation{
         void onLoginSave();
         void onLoginNoSave();
+        void onPermission();
 
     }
 

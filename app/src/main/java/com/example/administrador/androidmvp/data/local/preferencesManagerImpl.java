@@ -15,6 +15,7 @@ public class preferencesManagerImpl implements  PreferencesManager{
     public static final String PREFERENCES_KEY_PASS = "pass";
     public static final String PREFERENCES_KEY_TOKEN = "token";
     public static final String PREFERENCES_KEY_PREFERENCES_DRGO = "preferencesDrgoPaciente";
+    public static final String PREFERENCES_KEY_PERMISSION = "permission";
 
     public preferencesManagerImpl(Context context){
 
@@ -89,5 +90,15 @@ public class preferencesManagerImpl implements  PreferencesManager{
     public String getPreferencesToken() {
 
         return preferencesDrgo.getString(PREFERENCES_KEY_TOKEN,"");
+    }
+
+    @Override
+    public void savePreferencesPermissions(boolean permissionGranted) {
+        preferencesDrgo.edit().putBoolean(PREFERENCES_KEY_PERMISSION,permissionGranted);
+    }
+
+    @Override
+    public boolean getPreferencesPermission() {
+        return preferencesDrgo.getBoolean(PREFERENCES_KEY_PERMISSION,false);
     }
 }

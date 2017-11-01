@@ -1,8 +1,10 @@
 package com.example.administrador.androidmvp;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.PersistableBundle;
 import android.support.annotation.NonNull;
@@ -25,18 +27,24 @@ import java.util.Map;
 
 public class PermisosActivity extends AppCompatActivity implements View.OnClickListener {
 
+
+
     Button btnAceptar;
     public static final int PERMISSION_FINE_LOCATION = 1;
     public static final int PERMISSION_CAMERA = 2;
     public static final int PERMISSION_EXTERNAL_STORAGE = 3;
     public static final int PERMISSION_CALL = 4;
     public static final int MY_PERMISSION = 100;
+    SharedPreferences preferencesDrgo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_permisos);
         btnAceptar = (Button)findViewById(R.id.permission_btn_iniciar);
+        preferencesDrgo = getSharedPreferences("preferencesDrgoPaciente", Context.MODE_PRIVATE);
+        Log.e("permission",preferencesDrgo.getBoolean("permission",false)+"");
+
 
     }
 
@@ -94,12 +102,26 @@ public class PermisosActivity extends AppCompatActivity implements View.OnClickL
                     Log.e("permissions",perms.toString());
                     for (int i = 0;i<permissions.length;i++){
                         perms.put(permissions[i],grantResults[i]);
-                        Log.e("permissions",grantResults[i]+"");
+
+                        if(perms.get(permissions[i])!=PackageManager.PERMISSION_GRANTED){
+                            Toast.makeText(this,"es necesario conceder todos los permisos",Toast.LENGTH_SHORT).show();
+                            return;
+                        }
                     }
+                    savePreferencesPermission(true);
+                    goToLogin();
                 }
                 Log.e("permissions",perms.toString());
                 break;
         }
+        }
+
+        public void savePreferencesPermission(boolean granted){
+
+            preferencesDrgo.edit()
+                    .putBoolean("permission",granted)
+                    .apply();
+
         }
 
         void goToLogin(){

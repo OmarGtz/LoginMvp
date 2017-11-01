@@ -15,5 +15,8 @@ public interface PreferencesManager {
         String getPreferencesUser();
         String getPreferencesPass();
         String getPreferencesToken();
+        void  savePreferencesPermissions(boolean permissionGranted);
+        boolean getPreferencesPermission();
+
 
 }

@@ -21,6 +21,7 @@ public class SplashPresenterImp implements SplashPresenter, SplashInteractor.OnN
 
     @Override
     public void onCreate() {
+
         interactor.onPreferencesSave(preferencesManager,this);
     }
 
@@ -31,6 +32,11 @@ public class SplashPresenterImp implements SplashPresenter, SplashInteractor.OnN
             view.goToLogin();
         }
 
+    }
+
+    @Override
+    public void onPermission() {
+        view.goToPermissionManager();
     }
 
     @Override

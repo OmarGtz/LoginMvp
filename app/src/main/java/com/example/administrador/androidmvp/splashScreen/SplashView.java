@@ -8,5 +8,6 @@ public interface SplashView {
 
     void goToMain();
     void goToLogin();
+    void goToPermissionManager();
 
 }

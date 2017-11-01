@@ -10,14 +10,19 @@ import com.example.administrador.androidmvp.data.local.PreferencesManager;
 public class SplashInteractorImp implements  SplashInteractor {
     @Override
     public void onPreferencesSave(PreferencesManager preferencesDrgo, OnNavigation onNavigation) {
-
         String user = preferencesDrgo.getPreferencesUser();
         String pass = preferencesDrgo.getPreferencesPass();
 
-        if(user.isEmpty()&&pass.isEmpty()){
+        if(!preferencesDrgo.getPreferencesPermission()){
+            onNavigation.onPermission();
+        }
+
+        else if(user.isEmpty()&&pass.isEmpty()){
 
             onNavigation.onLoginNoSave();
+
         }
+
         else {
 
             onNavigation.onLoginSave();
